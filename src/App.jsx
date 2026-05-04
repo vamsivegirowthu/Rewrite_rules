@@ -4,14 +4,14 @@ function App() {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    fetch("/user")   // 👈 important change
+    fetch("/user/101")   // 👈 dynamic route
       .then(res => res.json())
       .then(data => setData(data.message));
   }, []);
 
   return (
     <div>
-      <h1>Serverless API Data</h1>
+      <h1>Dynamic Routing</h1>
       <h2>{data}</h2>
     </div>
   );

@@ -1,3 +1,7 @@
 export default function handler(req, res) {
-  res.status(200).json({ message: "Hello from API /api/test" });
+  const { id } = req.query;
+
+  res.status(200).json({
+    message: `User ID: ${id}`
+  });
 }
