@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/user/:id",
-      "destination": "/api/test?id=:id"
-    }
-  ]
-}
