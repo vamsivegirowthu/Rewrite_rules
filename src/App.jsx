@@ -1,20 +1,7 @@
-import { useEffect, useState } from "react";
+import Header from './components/header'; // ❌ wrong (small h)
 
 function App() {
-  const [data, setData] = useState("");
-
-  useEffect(() => {
-    fetch("/user/101")   // 👈 dynamic route
-      .then(res => res.json())
-      .then(data => setData(data.message));
-  }, []);
-
-  return (
-    <div>
-      <h1>Dynamic Routing</h1>
-      <h2>{data}</h2>
-    </div>
-  );
+  return <Header />;
 }
 
 export default App;
